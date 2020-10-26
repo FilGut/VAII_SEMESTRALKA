@@ -1,0 +1,309 @@
+body {
+    font-family: Arial;
+    background-color: antiquewhite;
+
+    background-image: url('wallpaperflare.com_wallpaper.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.hlavicka {
+    padding-top: 1px;
+    padding-bottom: 20px;
+    text-align: center; /* center the text */
+    background: rosybrown; /* green background */
+    color: gold; /* white text color */
+    background-size: cover;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.hlavicka h1{
+    font-size: 40px;
+}
+
+.hlavicka p{
+    font-size: 22px;
+}
+
+/* Style the top navigation bar */
+.menu {
+    overflow: hidden; /* Hide overflow */
+    background-color: #333; /* Dark background color */
+
+
+
+    /*position: -webkit-sticky;*/
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+/* Style the navigation bar links */
+.menu a {
+    float: left; /* Make sure that the links stay side-by-side */
+    display: block; /* Change the display to block, for responsive reasons (see below) */
+    color: white; /* White text color */
+    text-align: center; /* Center the text */
+    padding: 14px 20px; /* Add some padding */
+    text-decoration: none; /* Remove underline */
+}
+
+.rozbal {
+    float: left;
+    overflow: hidden; /* Hide overflow */
+    background-color: #333; /* Dark background color */
+}
+
+
+.rozbal .kategorie{
+    background-color: #333;
+    border: none;
+    outline: none;
+    display: block; /* Change the display to block, for responsive reasons (see below) *!*/
+    color: white; /* White text color */
+    text-align: center; /* Center the text */
+    padding: 14px 20px; /* Add some padding */
+    text-decoration: none; /* Remove underline */
+    font-family: inherit;
+    font-size: inherit;
+    margin: 0;
+    /*display: inline-block;*/
+    /*float: none;*/
+
+}
+
+.rozbalObsah {
+    background-color: #333;
+    display: none;
+    position: absolute;
+    z-index: 1;
+}
+
+.rozbalObsah a {
+    float: none; /* Make sure that the links stay side-by-side */
+    display: block; /* Change the display to block, for responsive reasons (see below) */
+    color: white; /* White text color */
+    text-align: left; /* Center the text */
+    padding: 14px 20px; /* Add some padding */
+    text-decoration: none; /* Remove underline */
+}
+
+/*.rozbal .kategorie {*/
+/*    position: relative;*/
+/*    display: inline-block;*/
+/*}*/
+
+/*.menu .rozbal .rozbalObsah {*/
+/*    */
+/*    background-color: #f1f1f1;*/
+/*    min-width: 160px;*/
+/*    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);*/
+/*    z-index: 1;*/
+/*}*/
+
+
+/* Change color on hover/mouse-over */
+.menu a:hover {
+    background-color: #ddd; /* Grey background color */
+    color: black; /* Black text color */
+}
+
+
+.rozbal:hover .rozbalObsah {
+    display: block;
+}
+
+.menu .rozbal .kategorie:hover {
+    background-color: #ddd; /* Grey background color */
+    color: black; /* Black text color */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.row {
+    display: flex;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side1 {
+    flex: 28%;
+    height: 100%;
+    background-color: lightgray;
+    padding: 20px;
+    margin: 7px;
+
+    /*position: -webkit-sticky;*/
+    position: sticky;
+    top: 10%;
+}
+
+.side2 {
+    flex: 28%;
+    height: 100%;
+    background-color: lightgray;
+    padding: 20px;
+    margin: 7px;
+
+    /*position: -webkit-sticky;*/
+    position: sticky;
+    top: 10%;
+}
+
+/* Main column */
+.main {
+    flex: 44%;
+    background-color: ghostwhite;
+    padding: 20px;
+}
+
+.oStranke {
+    width: 60vw;
+    background-color: azure;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Fake image, just for this example */
+.najlepsiVtip {
+    height: auto;
+    /*max-width: 800px;*/
+    max-width: 800px;
+    min-width: 372px;
+    position: relative;
+}
+
+.hlavicka .vtipyObrazky img {
+    min-width: 150px;
+    /*padding: 14px 20px; !* Add some padding */
+
+}
+
+
+/*.memeRow {*/
+/*    display: flex;*/
+/*    flex-wrap: wrap;*/
+/*    padding: 0 4px;*/
+/*}*/
+
+/* Create two equal columns that sits next to each other */
+.memeColumn {
+    width: 70%;
+    margin: auto;
+    transform: translate(0, 0);
+}
+
+.memeColumn img {
+    width: auto;
+    max-width: 100%;
+    padding: 5px;
+    margin: auto;
+    position: relative;
+}
+
+
+/*@media screen and (max-width: 700px) {*/
+/*    .riadok {*/
+/*        flex-direction: column;*/
+/*    }*/
+/*}*/
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+/*@media screen and (max-width: 400px) {*/
+/*    .menu a {*/
+/*        float: none;*/
+/*        width:100%;*/
+/*    }*/
+
+/*    .najlepsiVtip {*/
+/*        min-width: 100%;*/
+/*    }*/
+/*}*/
+
+
+/* extra malé zariadenia (mobily...) */
+@media only screen and (max-width: 600px) {
+}
+
+/* malé zariadenia (tablety...) */
+@media only screen and (max-width: 768px) {
+    
+    .menu {
+        position: static;
+    }
+    
+    .menu a {
+        float: none;
+        width:100%;
+    }
+
+    .menu .rozbal .kategorie {
+        float: none;
+        width:100%;
+    }
+
+    .menu .rozbal {
+        float: none;
+    }
+
+    .najlepsiVtip {
+        min-width: 100%;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .oStranke {
+        width: 80%;
+    }
+}
+
+/* stredne veľké zariadenia (väčšie tablety...) */
+@media only screen and (max-width: 992px) {
+
+
+}
+
+/* veľké zariadenia (laptopy, plochy... */
+@media only screen and (max-width: 1200px) {
+    .row{
+        flex-wrap: wrap;
+    }
+
+    /*.najlepsiVtip {*/
+    /*    position: center;*/
+    /*}*/
+
+    .side1 {
+        position: static;
+    }
+
+    .side2 {
+        position: static;
+    }
+
+}
+
+/* extra veľké zariadenia (veľké laptopy, veľké plochy...) */
+@media only screen and (min-width: 1200px) {
+}
+
