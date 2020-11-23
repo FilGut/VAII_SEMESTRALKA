@@ -93,7 +93,7 @@ body {
 }
 
 .menu .loggedIn a {
-    display: none
+    display: block
 }
 
 /*.rozbal .kategorie {*/
