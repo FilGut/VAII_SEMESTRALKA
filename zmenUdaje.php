@@ -10,7 +10,51 @@ if (isset($_POST['newName'])) {
         print ("Nie je možné meniť, pokiaľ nie ste prihlásený!");
     }
     else {
-        $storage->changeMyData($_POST['newName'], $_POST['newPassword'], $_POST['newEmail']);
+        if(!empty($_POST['newPassword']))
+        {
+            if($storage->checkPassword($_POST['newPassword'])==false)
+            {
+                print("ZLE ZADANÉ HESLO!");
+            }
+            else
+            {
+                $storage->changePassword($_POST['newPassword']);
+            }
+        }
+
+        if(!empty($_POST['newEmail']))
+        {
+            if($storage->checkEmail($_POST['newEmail'])==false)
+            {
+                print("ZLE ZADANÝ EMAIL!");
+            }
+            else{
+                $storage->changeEmail($_POST['newEmail']);
+            }
+        }
+
+        if(!empty($_POST['newName']))
+        {
+            $storage->changeName($_POST['newName']);
+        }
+
+
+//        if($storage->checkPassword($_POST['newPassword'])==false && !empty($_POST['newPassword']))
+//        {
+//            print("ZLE ZADANÉ HESLO!");
+//        }
+//        else if($storage->checkEmail($_POST['newEmail'])==false && !empty($_POST['newEmail']))
+//        {
+//            print("ZLE ZADANÝ EMAIL!");
+//        }
+//        else if($_POST['newPassword'] == "" && $_POST['newName'] == "" && !empty($_POST['newEmail']))
+//        {
+//            print("ŽIADNE ÚDAJE NEBOLI ZADANÉ!");
+//        }
+//        else
+//        {
+//            $storage->changeMyData($_POST['newName'], $_POST['newPassword'], $_POST['newEmail']);
+//        }
     }
 }
 
@@ -18,17 +62,25 @@ if (isset($_POST['newName'])) {
 //    $storage->register($_POST['newName'], $_POST['newPassword'], $_POST['newEmail']);
 //}
 
-if (isset($_POST['name'])) {
-    if($storage->login($_POST['name'], $_POST['password']))
-    {
-        echo "podarilo!";
-    }
+//if (isset($_POST['name'])) {
+//    if($storage->login($_POST['name'], $_POST['password']))
+//    {
+//        echo "podarilo!";
+//    }
+//}
+
+if (isset($_POST['logout'])) {
+    //echo "odhlaseny!";
+    $storage->logout();
+    header('Location: '.'vtipy.php');
 }
 
 
 if(array_key_exists('button1', $_POST)) {
     $storage->deleteMe();
-}
+
+
+    }
 
 
 //if (isset($_POST['name'])) {
@@ -54,105 +106,29 @@ if(isset($_SESSION['loggedIn'])){
 
 <body>
 
-<div class="hlavicka">
-    <h1>Zmeň údaje</h1>
-    <div class="vtipyObrazky">
-        <img src =unnamed.gif alt="Korunka" style="width:5%; height:5%;">
-        <img src =unnamed.gif alt="Korunka" style="width:5%; height:5%;">
-        <img src =unnamed.gif alt="Korunka" style="width:5%; height:5%;">
-        <img src =unnamed.gif alt="Korunka" style="width:5%; height:5%;">
-        <img src =unnamed.gif alt="Korunka" style="width:5%; height:5%;">
-        <img src =unnamed.gif alt="Korunka" style="width:5%; height:5%;">
-        <img src =unnamed.gif alt="Korunka" style="width:5%; height:5%;">
-        <img src =unnamed.gif alt="Korunka" style="width:5%; height:5%;">
-    </div>
-
-</div>
-
-<div class="menu">
-    <a href="vtipy.php">Domov</a>
-
-
-
-    <div class="rozbal">
-
-        <button class="kategorie">Kategórie
-            <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="rozbalObsah">
-            <a href="#">Textové vtipy</a>
-            <a href="#">Vtipné obrázky</a>
-            <a href="memecka.php">Memečka</a>
-        </div>
-    </div>
-
-    <div class="loggedOut">
-        <div class="rozbal">
-
-            <button class="kategorie">Prihlásiť
-                <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="rozbalObsah">
-                <form method="post" name="form">
-                    <input type="text" placeholder="Používat. meno" name="name" required>
-                    <br>
-                    <input type="password" placeholder="Heslo" name="password" required>
-                    <br>
-                    <input type="submit" value="Prihlásiť!" name="login">
-                </form>
-            </div>
-        </div>
-    </div>
-
-
-
-    <div class="loggedIn">
-        <div class="rozbal">
-
-            <button class="kategorie">Odhlásiť
-                <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="rozbalObsah">
-                <form method="post" name="form">
-                    <input type="submit" value="Odhlásiť!" name="logout">
-                </form>
-
-            </div>
-        </div>
-    </div>
-
-    <div class="loggedIn">
-        <a href="profil.php">Profil</a>
-    </div>
-
-
-    <a href="registracia.php">Registrovať</a>
-
-
-    <div class = loggedIn>
-        <a href="zmenUdaje.php">Zmeň údaje</a>
-    </div>
-
-
-    <a href="oStranke.php">O stránke</a>
-</div>
+<?php
+include 'menu.php';
+?>
 
 <div class="row">
 
     <div class="oStranke">
         <h1>ZMENA ÚDAJOV</h1>
         <form method="post" name="form">
+            <div class="popup">
+                <span class="popuptext" onclick="togglePopup()" id="myPopup">Zlý email alebo heslo (musí byť dlhé 6-12 a obsahovať 1 číslicu / špec. charakter)</span>
+            </div>
             <br>
             <input type="text" placeholder="Nové používat. meno" name="newName">
             <br>
             <br>
-            <input type="password" placeholder="Nové heslo" name="newPassword">
+            <input type="password" id="pass" placeholder="Nové heslo" name="newPassword">
             <br>
             <br>
-            <input type="text" placeholder="Nový e-mail" name="newEmail">
+            <input type="text" id="email" placeholder="Nový e-mail" name="newEmail">
             <br>
             <br>
-            <input type="submit" value="Zmeniť!" name="signup">
+            <input type="submit" onClick="return validate();" value="Zmeniť!" name="changeData">
         </form>
 
         <br>
@@ -163,14 +139,50 @@ if(isset($_SESSION['loggedIn'])){
                    class="button" value="ZMAZAŤ ÚČET!" />
         </form>
     </div>
-
-
-
-
-
-
-
 </div>
+
+
+<script>
+    function validate()
+    {
+        if(checkEmail() && checkPassword())
+        {
+            return true;
+        }
+        togglePopup();
+        return false;
+    }
+
+    function togglePopup()
+    {
+        var popup = document.getElementById("myPopup");
+        popup.classList.toggle("show");
+    }
+
+    function checkPassword()
+    {
+        var reg = /^(?=.*\d)(?=.*[A-Za-z])[0-9A-Za-z!@#$%]{6,12}$/;
+
+
+        if((document.getElementById("pass").value).match(reg) || (document.getElementById("pass").value) === ""){
+            return true;
+        }
+        //document.write("vratime false na prvom");
+        return false;
+    }
+
+    function checkEmail()
+    {
+        var reg = /^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,})$/i;
+
+        if((document.getElementById("email").value).match(reg) || (document.getElementById("email").value) === ""){
+            return true;
+        }
+        //document.write("vratime false na druhom");
+        return false;
+    }
+
+</script>
 
 
 </body>

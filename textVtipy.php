@@ -4,16 +4,24 @@ require "Account.php";
 
 $storage = new Account();
 
-if (isset($_POST['title']) && isset($_POST['joke'])) {
-    if (!isset($_SESSION['loggedIn']))
-    {
-        print ("Nie je možné pridávať, pokiaľ nie ste prihlásený!");
-    }
-    else {
-//        print("volám metódu");
-        $storage->addJokes($_POST['title'], $_POST['joke']);
-    }
+//if (isset($_POST['title']) && isset($_POST['joke'])) {
+//    if (!isset($_SESSION['loggedIn']))
+//    {
+//        print ("Nie je možné pridávať, pokiaľ nie ste prihlásený!");
+//    }
+//    else {
+////        print("volám metódu");
+//        $storage->addJokes($_POST['title'], $_POST['joke']);
+//    }
+//}
+
+if (isset($_POST['logout'])) {
+    //echo "odhlaseny!";
+    $storage->logout();
+    header('Location: '.'vtipy.php');
 }
+
+
 
 //if (isset($_POST['newName'])) {
 //    $storage->register($_POST['newName'], $_POST['newPassword'], $_POST['newEmail']);
@@ -55,62 +63,9 @@ if(isset($_SESSION['loggedIn'])){
 
 <body>
 
-<div class="hlavicka">
-    <h1>Zmeň údaje</h1>
-    <div class="vtipyObrazky">
-        <img src =unnamed.gif alt="Korunka" style="width:5%; height:5%;">
-        <img src =unnamed.gif alt="Korunka" style="width:5%; height:5%;">
-        <img src =unnamed.gif alt="Korunka" style="width:5%; height:5%;">
-        <img src =unnamed.gif alt="Korunka" style="width:5%; height:5%;">
-        <img src =unnamed.gif alt="Korunka" style="width:5%; height:5%;">
-        <img src =unnamed.gif alt="Korunka" style="width:5%; height:5%;">
-        <img src =unnamed.gif alt="Korunka" style="width:5%; height:5%;">
-        <img src =unnamed.gif alt="Korunka" style="width:5%; height:5%;">
-    </div>
-
-</div>
-
-<div class="menu">
-    <a href="vtipy.php">Domov</a>
-
-
-
-    <div class="rozbal">
-
-        <button class="kategorie">Kategórie
-            <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="rozbalObsah">
-            <a href="#">Textové vtipy</a>
-            <a href="#">Vtipné obrázky</a>
-            <a href="memecka.php">Memečka</a>
-        </div>
-    </div>
-
-    <div class="rozbal">
-
-        <button class="kategorie">Prihlásiť
-            <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="rozbalObsah">
-            <form method="post" name="form">
-                <input type="text" placeholder="Používat. meno" name="name" required>
-                <br>
-                <input type="password" placeholder="Heslo" name="password" required>
-                <br>
-                <input type="submit" value="Prihlásiť!" name="login">
-            </form>
-        </div>
-    </div>
-
-    <a href="registracia.php">Registrovať</a>
-
-    <div class = loggedIn>
-        <a href="zmenUdaje.php">Zmeň údaje</a>
-    </div>
-
-    <a href="oStranke.php">O stránke</a>
-</div>
+<?php
+include 'menu.php';
+?>
 
 <div class="row">
 
@@ -174,7 +129,7 @@ if(isset($_SESSION['loggedIn'])){
                         document.getElementById("content").innerHTML = this.responseText;
                     }
                 };
-                xmlhttp.open("GET","getJokes.php?q="+"2",true);
+                xmlhttp.open("GET","index.php?q=2",true);
                 xmlhttp.send();
 
             //onload=showAllJokes() toto bolo v body
@@ -182,9 +137,18 @@ if(isset($_SESSION['loggedIn'])){
             }
         </script>
         <script>
-            function addLike()
+            function addLike(id)
             {
-
+                var xmlhttp = new XMLHttpRequest();
+                xmlhttp.onreadystatechange = function () {
+                    if (this.readyState === 4 && this.status === 200) {
+                        document.getElementById("content").innerHTML = this.responseText;
+                    }
+                };
+                //document.write(document.getElementById("myText").value);
+                xmlhttp.open("GET", "index.php?q=3&j="+id, true);
+                xmlhttp.send();
+                showAllJokes();
             }
 
             function searchJokes() {
@@ -214,7 +178,7 @@ if(isset($_SESSION['loggedIn'])){
                     }
                 };
                 //document.write(document.getElementById("myText").value);
-                xmlhttp.open("GET", "getJokes.php?q="+document.getElementById("search").value, true);
+                xmlhttp.open("GET", "index.php?q="+document.getElementById("search").value, true);
                 xmlhttp.send();
             }
         </script>

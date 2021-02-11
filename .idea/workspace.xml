@@ -1,7 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="277c5770-6916-4c2f-94af-297fc2e1119b" name="Default Changelist" comment="AJAX" />
+    <list default="true" id="277c5770-6916-4c2f-94af-297fc2e1119b" name="Default Changelist" comment="AJAX">
+      <change afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/menu.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/prihlasit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6cc6c8fe-c430-42d5-a779-10706a98e8e5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/6cc6c8fe-c430-42d5-a779-10706a98e8e5.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Account.php" beforeDir="false" afterPath="$PROJECT_DIR$/Account.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loggedIn.css" beforeDir="false" afterPath="$PROJECT_DIR$/loggedIn.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memecka.php" beforeDir="false" afterPath="$PROJECT_DIR$/memecka.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oStranke.php" beforeDir="false" afterPath="$PROJECT_DIR$/oStranke.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profil.php" beforeDir="false" afterPath="$PROJECT_DIR$/profil.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/registracia.php" beforeDir="false" afterPath="$PROJECT_DIR$/registracia.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styl.css" beforeDir="false" afterPath="$PROJECT_DIR$/styl.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/textVtipy.php" beforeDir="false" afterPath="$PROJECT_DIR$/textVtipy.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vtipy.php" beforeDir="false" afterPath="$PROJECT_DIR$/vtipy.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zmenUdaje.php" beforeDir="false" afterPath="$PROJECT_DIR$/zmenUdaje.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,6 +36,11 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PhpServers">
+    <servers>
+      <server host="localhost" id="181fbd06-91f0-4ab8-9bcf-7d4e5f446011" name="localhost" />
+    </servers>
   </component>
   <component name="ProjectId" id="1jHX8DQ3MxlEIAPdl9QBODWYQfM" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -71,7 +92,8 @@
       <workItem from="1611008605534" duration="8149000" />
       <workItem from="1612782339522" duration="10955000" />
       <workItem from="1612866589839" duration="15379000" />
-      <workItem from="1612955714240" duration="11912000" />
+      <workItem from="1612955714240" duration="33283000" />
+      <workItem from="1613043592228" duration="7310000" />
     </task>
     <task id="LOCAL-00001" summary="AJAX">
       <created>1612982318337</created>
@@ -80,11 +102,29 @@
       <option name="project" value="LOCAL" />
       <updated>1612982318337</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="AJAX">
+      <created>1612982608924</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1612982608924</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="AJAX" />

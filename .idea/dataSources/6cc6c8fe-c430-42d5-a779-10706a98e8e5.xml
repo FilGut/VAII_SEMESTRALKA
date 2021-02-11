@@ -1058,81 +1058,119 @@
     </user>
     <table id="335" parent="2" name="articles"/>
     <table id="336" parent="7" name="jokes"/>
-    <table id="337" parent="7" name="users"/>
-    <column id="338" parent="335" name="id">
+    <table id="337" parent="7" name="likes"/>
+    <table id="338" parent="7" name="users"/>
+    <column id="339" parent="335" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="339" parent="335" name="title">
+    <column id="340" parent="335" name="title">
       <Position>2</Position>
       <DataType>linestring|0s</DataType>
     </column>
-    <column id="340" parent="335" name="text">
+    <column id="341" parent="335" name="text">
       <Position>3</Position>
       <DataType>linestring|0s</DataType>
     </column>
-    <key id="341" parent="335" name="PRIMARY">
+    <key id="342" parent="335" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="342" parent="336" name="joke_id">
+    <column id="343" parent="336" name="joke_id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="343" parent="336" name="user_id">
+    <column id="344" parent="336" name="user_id">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
     </column>
-    <column id="344" parent="336" name="likes">
+    <column id="345" parent="336" name="likes">
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
     </column>
-    <column id="345" parent="336" name="joke">
+    <column id="346" parent="336" name="joke">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
     </column>
-    <column id="346" parent="336" name="title">
+    <column id="347" parent="336" name="title">
       <Position>5</Position>
       <DataType>varchar(100)|0s</DataType>
     </column>
-    <index id="347" parent="336" name="jokes_fk">
+    <index id="348" parent="336" name="jokes_fk">
       <ColNames>user_id</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="348" parent="336" name="PRIMARY">
+    <key id="349" parent="336" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>joke_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="349" parent="336" name="jokes_fk">
+    <foreign-key id="350" parent="336" name="jokes_fk">
       <ColNames>user_id</ColNames>
       <RefTableName>users</RefTableName>
       <RefColNames>user_id</RefColNames>
     </foreign-key>
-    <column id="350" parent="337" name="user_id">
+    <column id="351" parent="337" name="like_id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="351" parent="337" name="name">
+    <column id="352" parent="337" name="user_id">
+      <Position>2</Position>
+      <DataType>int(11)|0s</DataType>
+    </column>
+    <column id="353" parent="337" name="joke_id">
+      <Position>3</Position>
+      <DataType>int(11)|0s</DataType>
+    </column>
+    <index id="354" parent="337" name="likes_fk">
+      <ColNames>user_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <index id="355" parent="337" name="joke_id">
+      <ColNames>joke_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="356" parent="337" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>like_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="357" parent="337" name="likes_fk">
+      <ColNames>user_id</ColNames>
+      <RefTableName>users</RefTableName>
+      <RefColNames>user_id</RefColNames>
+    </foreign-key>
+    <foreign-key id="358" parent="337" name="likes_ibfk_1">
+      <ColNames>joke_id</ColNames>
+      <RefTableName>jokes</RefTableName>
+      <RefColNames>joke_id</RefColNames>
+    </foreign-key>
+    <column id="359" parent="338" name="user_id">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="360" parent="338" name="name">
       <Position>2</Position>
       <DataType>varchar(100)|0s</DataType>
     </column>
-    <column id="352" parent="337" name="password">
+    <column id="361" parent="338" name="password">
       <Position>3</Position>
       <DataType>varchar(100)|0s</DataType>
     </column>
-    <column id="353" parent="337" name="email">
+    <column id="362" parent="338" name="email">
       <Position>4</Position>
       <DataType>varchar(100)|0s</DataType>
     </column>
-    <key id="354" parent="337" name="PRIMARY">
+    <key id="363" parent="338" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>user_id</ColNames>
       <Primary>1</Primary>
