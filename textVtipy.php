@@ -142,13 +142,13 @@ include 'menu.php';
                 var xmlhttp = new XMLHttpRequest();
                 xmlhttp.onreadystatechange = function () {
                     if (this.readyState === 4 && this.status === 200) {
-                        document.getElementById("content").innerHTML = this.responseText;
+                        document.getElementById("likeButton").style.visibility = 'hidden';
                     }
                 };
                 //document.write(document.getElementById("myText").value);
                 xmlhttp.open("GET", "index.php?q=3&j="+id, true);
                 xmlhttp.send();
-                showAllJokes();
+                //showAllJokes();
             }
 
             function searchJokes() {
