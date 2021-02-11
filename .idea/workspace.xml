@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="277c5770-6916-4c2f-94af-297fc2e1119b" name="Default Changelist" comment="úprava názvov v hlavičkách html">
-      <change afterPath="$PROJECT_DIR$/prihlasitChecking.php" afterDir="false" />
+    <list default="true" id="277c5770-6916-4c2f-94af-297fc2e1119b" name="Default Changelist" comment="záhadná chyba opravená týkajúca sa predošlého commitu">
+      <change afterPath="$PROJECT_DIR$/profilJokesControl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/textVJokesControl.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/validation.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prihlasit.php" beforeDir="false" afterPath="$PROJECT_DIR$/prihlasit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profil.php" beforeDir="false" afterPath="$PROJECT_DIR$/profil.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/registracia.php" beforeDir="false" afterPath="$PROJECT_DIR$/registracia.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/registraciaChecking.php" beforeDir="false" afterPath="$PROJECT_DIR$/registraciaChecking.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/textVtipy.php" beforeDir="false" afterPath="$PROJECT_DIR$/textVtipy.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/zmenUdaje.php" beforeDir="false" afterPath="$PROJECT_DIR$/zmenUdaje.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zmenUdajeChecking.php" beforeDir="false" afterPath="$PROJECT_DIR$/zmenUdajeChecking.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +24,7 @@
       <list>
         <option value="HTML File" />
         <option value="CSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -85,7 +87,7 @@
       <workItem from="1612782339522" duration="10955000" />
       <workItem from="1612866589839" duration="15379000" />
       <workItem from="1612955714240" duration="33283000" />
-      <workItem from="1613043592228" duration="21934000" />
+      <workItem from="1613043592228" duration="25982000" />
     </task>
     <task id="LOCAL-00001" summary="AJAX">
       <created>1612982318337</created>
@@ -143,7 +145,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613074919873</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="záhadná chyba opravená týkajúca sa predošlého commitu">
+      <created>1613076206355</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1613076206355</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -167,6 +176,7 @@
     <MESSAGE value="odstránenie komentárov v php časti stránok" />
     <MESSAGE value="oddelenie php súborov od html" />
     <MESSAGE value="úprava názvov v hlavičkách html" />
-    <option name="LAST_COMMIT_MESSAGE" value="úprava názvov v hlavičkách html" />
+    <MESSAGE value="záhadná chyba opravená týkajúca sa predošlého commitu" />
+    <option name="LAST_COMMIT_MESSAGE" value="záhadná chyba opravená týkajúca sa predošlého commitu" />
   </component>
 </project>

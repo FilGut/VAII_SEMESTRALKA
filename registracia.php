@@ -42,48 +42,7 @@ include 'menu.php';
 
 </div>
 
-<script>
-    function validate()
-    {
-        if(checkEmail() && checkPassword())
-        {
-            return true;
-        }
-        togglePopup();
-        return false;
-    }
-
-    function togglePopup()
-    {
-        var popup = document.getElementById("myPopup");
-        popup.classList.toggle("show");
-    }
-
-    function checkPassword()
-    {
-        var reg = /^(?=.*\d)(?=.*[A-Za-z])[0-9A-Za-z!@#$%]{6,12}$/;
-
-
-        if((document.getElementById("pass").value).match(reg)){
-            return true;
-        }
-        //document.write("vratime false na prvom");
-        return false;
-    }
-
-    function checkEmail()
-    {
-        var reg = /^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,})$/i;
-
-        if((document.getElementById("email").value).match(reg)){
-            return true;
-        }
-        //document.write("vratime false na druhom");
-        return false;
-    }
-
-</script>
-
+<script src="validation.js"></script>
 
 </body>
 </html>
