@@ -1,44 +1,11 @@
-<?php
-
-require "Storage.php";
-require "Account.php";
-
-$storage = new Account();
-
-if (isset($_POST['newName'])) {
-    if($storage->checkPassword($_POST['newPassword'])==false)
-    {
-        print("ZLE ZADANÉ HESLO!");
-    }
-    else if($storage->checkEmail($_POST['newEmail'])==false)
-    {
-        print("ZLE ZADANÝ EMAIL!");
-    }
-    else
-    {
-        $storage->register($_POST['newName'], $_POST['newPassword'], $_POST['newEmail']);
-    }
-}
-
-if (isset($_POST['logout'])) {
-    $storage->logout();
-    header('Location: '.'vtipy.php');
-}
-
-if(isset($_SESSION['loggedIn'])){
-    $cssFileName = 'loggedIn.css';
-}else{
-    $cssFileName = 'styl.css';
-}
-
-?>
-
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
+    <?php require 'Storage.php'; require 'Account.php';?>
+    <?php include 'registracia.php';?>
     <meta charset="UTF-8">
     <title>Info</title>
-    <link rel="stylesheet" href="<?php echo $cssFileName; ?>">
+    <link rel="stylesheet" href="<?php include 'generalChecking.php' ?>">
 
 </head>
 

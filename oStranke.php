@@ -1,29 +1,10 @@
-<?php
-
-require "Storage.php";
-require "Account.php";
-
-$storage = new Account();
-
-if (isset($_POST['logout'])) {
-    $storage->logout();
-    header('Location: '.'vtipy.php');
-}
-
-if(isset($_SESSION['loggedIn'])){
-    $cssFileName = 'loggedIn.css';
-}else{
-    $cssFileName = 'styl.css';
-}
-
-?>
-
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
+    <?php require 'Storage.php'; require 'Account.php';?>
     <meta charset="UTF-8">
     <title>O stranke</title>
-    <link rel="stylesheet" href="<?php echo $cssFileName; ?>">
+    <link rel="stylesheet" href="<?php include 'generalChecking.php' ?>">
 </head>
 
 <body>

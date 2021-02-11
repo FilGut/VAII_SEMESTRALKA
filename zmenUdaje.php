@@ -1,67 +1,11 @@
-<?php
-require "Storage.php";
-require "Account.php";
-
-$storage = new Account();
-
-if (isset($_POST['newName'])) {
-    if (!isset($_SESSION['loggedIn']))
-    {
-        print ("Nie je možné meniť, pokiaľ nie ste prihlásený!");
-    }
-    else {
-        if(!empty($_POST['newPassword']))
-        {
-            if($storage->checkPassword($_POST['newPassword'])==false)
-            {
-                print("ZLE ZADANÉ HESLO!");
-            }
-            else
-            {
-                $storage->changePassword($_POST['newPassword']);
-            }
-        }
-
-        if(!empty($_POST['newEmail']))
-        {
-            if($storage->checkEmail($_POST['newEmail'])==false)
-            {
-                print("ZLE ZADANÝ EMAIL!");
-            }
-            else{
-                $storage->changeEmail($_POST['newEmail']);
-            }
-        }
-
-        if(!empty($_POST['newName']))
-        {
-            $storage->changeName($_POST['newName']);
-        }
-    }
-}
-
-if(array_key_exists('button1', $_POST)) {
-    $storage->deleteMe();
-}
-
-if (isset($_POST['logout'])) {
-    $storage->logout();
-    header('Location: '.'vtipy.php');
-}
-
-if(isset($_SESSION['loggedIn'])){
-    $cssFileName = 'loggedIn.css';
-}else{
-    $cssFileName = 'styl.css';
-}
-?>
-
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
+    <?php require 'Storage.php'; require 'Account.php';?>
+    <?php include 'zmenUdajeChecking.php';?>
     <meta charset="UTF-8">
     <title>Vtipy</title>
-    <link rel="stylesheet" href="<?php echo $cssFileName; ?>">
+    <link rel="stylesheet" href="<?php include 'generalChecking.php' ?>">
 </head>
 
 <body>

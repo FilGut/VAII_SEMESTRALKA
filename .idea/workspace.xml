@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="277c5770-6916-4c2f-94af-297fc2e1119b" name="Default Changelist" comment="oprava zobrazenia likov =&gt; ajax">
+    <list default="true" id="277c5770-6916-4c2f-94af-297fc2e1119b" name="Default Changelist" comment="odstránenie komentárov v php časti stránok">
+      <change afterPath="$PROJECT_DIR$/generalChecking.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/profilChecking.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/registraciaChecking.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/zmenUdajeChecking.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/memecka.php" beforeDir="false" afterPath="$PROJECT_DIR$/memecka.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/oStranke.php" beforeDir="false" afterPath="$PROJECT_DIR$/oStranke.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/profil.php" beforeDir="false" afterPath="$PROJECT_DIR$/profil.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/registracia.php" beforeDir="false" afterPath="$PROJECT_DIR$/registracia.php" afterDir="false" />
@@ -86,7 +89,7 @@
       <workItem from="1612782339522" duration="10955000" />
       <workItem from="1612866589839" duration="15379000" />
       <workItem from="1612955714240" duration="33283000" />
-      <workItem from="1613043592228" duration="14495000" />
+      <workItem from="1613043592228" duration="20317000" />
     </task>
     <task id="LOCAL-00001" summary="AJAX">
       <created>1612982318337</created>
@@ -123,7 +126,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613067166168</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="odstránenie komentárov v php časti stránok">
+      <created>1613068619227</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1613068619227</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -144,6 +154,7 @@
     <MESSAGE value="AJAX" />
     <MESSAGE value="oprava menu, includnuté menu v samostatnom súbore" />
     <MESSAGE value="oprava zobrazenia likov =&gt; ajax" />
-    <option name="LAST_COMMIT_MESSAGE" value="oprava zobrazenia likov =&gt; ajax" />
+    <MESSAGE value="odstránenie komentárov v php časti stránok" />
+    <option name="LAST_COMMIT_MESSAGE" value="odstránenie komentárov v php časti stránok" />
   </component>
 </project>
