@@ -225,6 +225,7 @@ class Account extends Storage
                 $sql = 'DELETE FROM likes WHERE user_id = ? AND joke_id = ?';
                 $this->db->prepare($sql)->execute([$_SESSION['user_id'], $j]);
             }
+            $this->showAllJokes();
 
         } catch (PDOException $e) {
             echo 'Connection failer: ' . $e->getMessage();

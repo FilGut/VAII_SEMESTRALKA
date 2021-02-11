@@ -110,10 +110,11 @@ include 'menu.php';
             document.querySelectorAll('.add')[0].style.display = 'none';
             document.querySelectorAll('.add')[0].style.visibility = 'hidden';
 
+            showJokes();
 
-            document.querySelectorAll('.jokes')[0].style.display = 'none';
+            //document.querySelectorAll('.jokes')[0].style.display = 'none';
 
-            document.querySelectorAll('.jokes')[0].style.visibility = 'hidden';
+            //document.querySelectorAll('.jokes')[0].style.visibility = 'hidden';
 
             function showJokes() {
                     hidden1 = !hidden1;
