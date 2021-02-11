@@ -2,7 +2,7 @@
 <html lang="zxx">
 <head>
     <?php require 'Storage.php'; require 'Account.php';?>
-    <?php include 'zmenUdajeChecking.php';?>
+    <?php include 'zmenUdajeChecking.php'?>
     <meta charset="UTF-8">
     <title>ZmenUdaje</title>
     <link rel="stylesheet" href="<?php include 'generalChecking.php' ?>">
