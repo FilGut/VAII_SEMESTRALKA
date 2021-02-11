@@ -3,7 +3,7 @@
 <head>
     <?php require 'Storage.php'; require 'Account.php';?>
     <meta charset="UTF-8">
-    <title>O stranke</title>
+    <title>Info</title>
     <link rel="stylesheet" href="<?php include 'generalChecking.php' ?>">
 </head>
 

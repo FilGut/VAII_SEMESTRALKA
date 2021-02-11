@@ -4,7 +4,7 @@
     <?php require 'Storage.php'; require 'Account.php';?>
     <?php include 'zmenUdajeChecking.php';?>
     <meta charset="UTF-8">
-    <title>Vtipy</title>
+    <title>ZmenUdaje</title>
     <link rel="stylesheet" href="<?php include 'generalChecking.php' ?>">
 </head>
 

@@ -3,7 +3,7 @@
 <head>
     <?php require 'Storage.php'; require 'Account.php';?>
     <meta charset="UTF-8">
-    <title>Vtipy</title>
+    <title>TextVtipy</title>
     <link rel="stylesheet" href="<?php include 'generalChecking.php' ?>">
 </head>
 

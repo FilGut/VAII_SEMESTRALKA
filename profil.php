@@ -4,7 +4,7 @@
     <?php require 'Storage.php'; require 'Account.php';?>
     <?php include 'profilChecking.php';?>
     <meta charset="UTF-8">
-    <title>Vtipy</title>
+    <title>Profil</title>
     <link rel="stylesheet" href="<?php include 'generalChecking.php'; ?>">
 </head>
 

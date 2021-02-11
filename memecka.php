@@ -20,9 +20,10 @@ if(isset($_SESSION['loggedIn'])){
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
+    <?php require 'Storage.php'; require 'Account.php';?>
     <meta charset="UTF-8">
-    <title>Vtipy</title>
-    <link rel="stylesheet" href="<?php echo $cssFileName; ?>">
+    <title>Memecka</title>
+    <link rel="stylesheet" href="<?php include 'generalChecking.php' ?>">
 </head>
 
 <body>
