@@ -4,48 +4,11 @@ require "Account.php";
 
 $storage = new Account();
 
-//if (isset($_POST['title']) && isset($_POST['joke'])) {
-//    if (!isset($_SESSION['loggedIn']))
-//    {
-//        print ("Nie je možné pridávať, pokiaľ nie ste prihlásený!");
-//    }
-//    else {
-////        print("volám metódu");
-//        $storage->addJokes($_POST['title'], $_POST['joke']);
-//    }
-//}
-
 if (isset($_POST['logout'])) {
-    //echo "odhlaseny!";
     $storage->logout();
     header('Location: '.'vtipy.php');
 }
 
-
-
-//if (isset($_POST['newName'])) {
-//    $storage->register($_POST['newName'], $_POST['newPassword'], $_POST['newEmail']);
-//}
-
-//if (isset($_POST['name'])) {
-//    if($storage->login($_POST['name'], $_POST['password']))
-//    {
-//        echo "podarilo!";
-//    }
-//}
-
-
-//if(array_key_exists('button1', $_POST)) {
-//    $storage->deleteMe();
-//}
-
-
-//if (isset($_POST['name'])) {
-//    if($storage->login($_POST['name'], $_POST['password']))
-//    {
-//        echo "podarilo!";
-//    }
-//}
 if(isset($_SESSION['loggedIn'])){
     $cssFileName = 'loggedIn.css';
 }else{

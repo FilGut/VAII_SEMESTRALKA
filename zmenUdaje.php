@@ -37,58 +37,18 @@ if (isset($_POST['newName'])) {
         {
             $storage->changeName($_POST['newName']);
         }
-
-
-//        if($storage->checkPassword($_POST['newPassword'])==false && !empty($_POST['newPassword']))
-//        {
-//            print("ZLE ZADANÉ HESLO!");
-//        }
-//        else if($storage->checkEmail($_POST['newEmail'])==false && !empty($_POST['newEmail']))
-//        {
-//            print("ZLE ZADANÝ EMAIL!");
-//        }
-//        else if($_POST['newPassword'] == "" && $_POST['newName'] == "" && !empty($_POST['newEmail']))
-//        {
-//            print("ŽIADNE ÚDAJE NEBOLI ZADANÉ!");
-//        }
-//        else
-//        {
-//            $storage->changeMyData($_POST['newName'], $_POST['newPassword'], $_POST['newEmail']);
-//        }
     }
 }
 
-//if (isset($_POST['newName'])) {
-//    $storage->register($_POST['newName'], $_POST['newPassword'], $_POST['newEmail']);
-//}
-
-//if (isset($_POST['name'])) {
-//    if($storage->login($_POST['name'], $_POST['password']))
-//    {
-//        echo "podarilo!";
-//    }
-//}
+if(array_key_exists('button1', $_POST)) {
+    $storage->deleteMe();
+}
 
 if (isset($_POST['logout'])) {
-    //echo "odhlaseny!";
     $storage->logout();
     header('Location: '.'vtipy.php');
 }
 
-
-if(array_key_exists('button1', $_POST)) {
-    $storage->deleteMe();
-
-
-    }
-
-
-//if (isset($_POST['name'])) {
-//    if($storage->login($_POST['name'], $_POST['password']))
-//    {
-//        echo "podarilo!";
-//    }
-//}
 if(isset($_SESSION['loggedIn'])){
     $cssFileName = 'loggedIn.css';
 }else{

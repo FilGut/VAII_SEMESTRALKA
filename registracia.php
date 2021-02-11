@@ -1,38 +1,29 @@
 <?php
-    require "Storage.php";
-    require "Account.php";
 
-    $storage = new Account();
+require "Storage.php";
+require "Account.php";
 
-    if (isset($_POST['newName'])) {
-        if($storage->checkPassword($_POST['newPassword'])==false)
-        {
-            print("ZLE ZADANÉ HESLO!");
-        }
-        else if($storage->checkEmail($_POST['newEmail'])==false)
-        {
-            print("ZLE ZADANÝ EMAIL!");
-        }
-        else
-        {
-            $storage->register($_POST['newName'], $_POST['newPassword'], $_POST['newEmail']);
-        }
+$storage = new Account();
+
+if (isset($_POST['newName'])) {
+    if($storage->checkPassword($_POST['newPassword'])==false)
+    {
+        print("ZLE ZADANÉ HESLO!");
     }
-
-//    if (isset($_POST['name'])) {
-//        if($storage->login($_POST['name'], $_POST['password']))
-//        {
-//            echo "podarilo!";
-//        }
-//    }
-
-    if (isset($_POST['logout'])) {
-        //echo "odhlaseny!";
-        $storage->logout();
-        header('Location: '.'vtipy.php');
+    else if($storage->checkEmail($_POST['newEmail'])==false)
+    {
+        print("ZLE ZADANÝ EMAIL!");
     }
+    else
+    {
+        $storage->register($_POST['newName'], $_POST['newPassword'], $_POST['newEmail']);
+    }
+}
 
-
+if (isset($_POST['logout'])) {
+    $storage->logout();
+    header('Location: '.'vtipy.php');
+}
 
 if(isset($_SESSION['loggedIn'])){
     $cssFileName = 'loggedIn.css';

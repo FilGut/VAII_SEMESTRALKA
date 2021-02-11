@@ -1,39 +1,21 @@
-
 <?php
+
 require "Storage.php";
 require "Account.php";
 
-
 $storage = new Account();
 
-//if (isset($_POST['newName'])) {
-//    $storage->register($_POST['newName'], $_POST['newPassword'], $_POST['newEmail']);
-//}
-
-//echo "dadadad";
-
-//if (isset($_POST['name'])) {
-//    if($storage->login($_POST['name'], $_POST['password']))
-//    {
-//        echo "podariloSaPrihlasitx  !";
-//    }
-//}
-
 if (isset($_POST['logout'])) {
-    //echo "odhlaseny!";
     $storage->logout();
     header('Location: '.'vtipy.php');
 }
 
+if(isset($_SESSION['loggedIn'])){
+    $cssFileName = 'loggedIn.css';
+}else{
+    $cssFileName = 'styl.css';
+}
 
-
-    if(isset($_SESSION['loggedIn'])){
-        $cssFileName = 'loggedIn.css';
-        print("používame loggedIn");
-    }else{
-        $cssFileName = 'styl.css';
-        print("používame tradičný štýl");
-    }
 ?>
 
 <!DOCTYPE html>

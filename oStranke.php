@@ -1,40 +1,28 @@
 <?php
+
 require "Storage.php";
 require "Account.php";
 
 $storage = new Account();
 
-//if (isset($_POST['newName'])) {
-//    $storage->register($_POST['newName'], $_POST['newPassword'], $_POST['newEmail']);
-//}
-
-//if (isset($_POST['name'])) {
-//    if($storage->login($_POST['name'], $_POST['password']))
-//    {
-//        echo "podarilo!";
-//    }
-//}
-
 if (isset($_POST['logout'])) {
-    //echo "odhlaseny!";
     $storage->logout();
     header('Location: '.'vtipy.php');
 }
-
-
 
 if(isset($_SESSION['loggedIn'])){
     $cssFileName = 'loggedIn.css';
 }else{
     $cssFileName = 'styl.css';
 }
+
 ?>
 
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
     <meta charset="UTF-8">
-    <title>Vtipy</title>
+    <title>O stranke</title>
     <link rel="stylesheet" href="<?php echo $cssFileName; ?>">
 </head>
 

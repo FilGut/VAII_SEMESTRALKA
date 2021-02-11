@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="277c5770-6916-4c2f-94af-297fc2e1119b" name="Default Changelist" comment="oprava menu, includnuté menu v samostatnom súbore">
+    <list default="true" id="277c5770-6916-4c2f-94af-297fc2e1119b" name="Default Changelist" comment="oprava zobrazenia likov =&gt; ajax">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Account.php" beforeDir="false" afterPath="$PROJECT_DIR$/Account.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memecka.php" beforeDir="false" afterPath="$PROJECT_DIR$/memecka.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oStranke.php" beforeDir="false" afterPath="$PROJECT_DIR$/oStranke.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/profil.php" beforeDir="false" afterPath="$PROJECT_DIR$/profil.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/registracia.php" beforeDir="false" afterPath="$PROJECT_DIR$/registracia.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/textVtipy.php" beforeDir="false" afterPath="$PROJECT_DIR$/textVtipy.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vtipy.php" beforeDir="false" afterPath="$PROJECT_DIR$/vtipy.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zmenUdaje.php" beforeDir="false" afterPath="$PROJECT_DIR$/zmenUdaje.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +86,7 @@
       <workItem from="1612782339522" duration="10955000" />
       <workItem from="1612866589839" duration="15379000" />
       <workItem from="1612955714240" duration="33283000" />
-      <workItem from="1613043592228" duration="12995000" />
+      <workItem from="1613043592228" duration="14495000" />
     </task>
     <task id="LOCAL-00001" summary="AJAX">
       <created>1612982318337</created>
@@ -112,7 +116,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613064200824</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="oprava zobrazenia likov =&gt; ajax">
+      <created>1613067166168</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1613067166168</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -132,6 +143,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="AJAX" />
     <MESSAGE value="oprava menu, includnuté menu v samostatnom súbore" />
-    <option name="LAST_COMMIT_MESSAGE" value="oprava menu, includnuté menu v samostatnom súbore" />
+    <MESSAGE value="oprava zobrazenia likov =&gt; ajax" />
+    <option name="LAST_COMMIT_MESSAGE" value="oprava zobrazenia likov =&gt; ajax" />
   </component>
 </project>
