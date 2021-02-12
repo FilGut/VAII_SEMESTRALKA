@@ -1,5 +1,8 @@
 showAllJokes();
 
+/**
+ * funkcia vytvára AJAX volanie na žiadosť o načítanie všetkých vtipov
+ */
 function showAllJokes() {
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function() {
@@ -11,6 +14,9 @@ function showAllJokes() {
     xmlhttp.send();
 }
 
+/**
+ * funkcia vytvára AJAX volanie na žiadosť o aktualizovanie hodnoty počtu likov na stránke
+ */
 function addLike(id)
 {
     var xmlhttp = new XMLHttpRequest();
@@ -23,6 +29,9 @@ function addLike(id)
     xmlhttp.send();
 }
 
+/**
+ * funkcia vytvára AJAX volanie na žiadosť o načítanie takých vtipov, ktoré vyhovujú hľadanému výrazu
+ */
 function searchJokes() {
     var xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {

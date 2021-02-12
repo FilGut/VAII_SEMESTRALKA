@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="277c5770-6916-4c2f-94af-297fc2e1119b" name="Default Changelist" comment="upratanie súborov do adresárov a vyriešenie problému s dĺžkou vtipu">
-      <change afterPath="$PROJECT_DIR$/php/checkings/adminChecking.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sites/admin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/6cc6c8fe-c430-42d5-a779-10706a98e8e5.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/6cc6c8fe-c430-42d5-a779-10706a98e8e5.xml" afterDir="false" />
+    <list default="true" id="277c5770-6916-4c2f-94af-297fc2e1119b" name="Default Changelist" comment="odstránenie obrázkov z memes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/profilJokesControl.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/profilJokesControl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/textVJokesControl.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/textVJokesControl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/validation.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/validation.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/php/Account.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/Account.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/php/Jokes.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/Jokes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/php/menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/menu.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sites/memecka.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/Runner.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/Runner.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/php/Storage.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/Storage.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,9 +62,9 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\miros\Desktop\Vysoká škola\3. ročník\VAII\3cv\php_mysql\www\images" />
       <recent name="C:\Users\miros\Desktop\Vysoká škola\3. ročník\VAII\3cv\php_mysql\www\php\checkings" />
       <recent name="C:\Users\miros\Desktop\Vysoká škola\3. ročník\VAII\3cv\php_mysql\www\sites" />
-      <recent name="C:\Users\miros\Desktop\Vysoká škola\3. ročník\VAII\3cv\php_mysql\www\images" />
       <recent name="C:\Users\miros\Desktop\Vysoká škola\3. ročník\VAII\3cv\php_mysql\www\js" />
       <recent name="C:\Users\miros\Desktop\Vysoká škola\3. ročník\VAII\3cv\php_mysql\www\style" />
     </key>
@@ -91,7 +92,7 @@
       <workItem from="1612782339522" duration="10955000" />
       <workItem from="1612866589839" duration="15379000" />
       <workItem from="1612955714240" duration="33283000" />
-      <workItem from="1613043592228" duration="37550000" />
+      <workItem from="1613043592228" duration="40797000" />
     </task>
     <task id="LOCAL-00001" summary="AJAX">
       <created>1612982318337</created>
@@ -184,7 +185,21 @@
       <option name="project" value="LOCAL" />
       <updated>1613094491003</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="pridanie admin sekcie, odstránenie kategórií v menu a stránky memečiek">
+      <created>1613099111513</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1613099111513</updated>
+    </task>
+    <task id="LOCAL-00015" summary="odstránenie obrázkov z memes">
+      <created>1613099205863</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1613099205863</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -213,6 +228,8 @@
     <MESSAGE value="chyba v javascripte opravená" />
     <MESSAGE value="upratanie php súborov a vyriešenie problému so session" />
     <MESSAGE value="upratanie súborov do adresárov a vyriešenie problému s dĺžkou vtipu" />
-    <option name="LAST_COMMIT_MESSAGE" value="upratanie súborov do adresárov a vyriešenie problému s dĺžkou vtipu" />
+    <MESSAGE value="pridanie admin sekcie, odstránenie kategórií v menu a stránky memečiek" />
+    <MESSAGE value="odstránenie obrázkov z memes" />
+    <option name="LAST_COMMIT_MESSAGE" value="odstránenie obrázkov z memes" />
   </component>
 </project>

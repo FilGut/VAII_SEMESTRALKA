@@ -4,6 +4,9 @@ document.querySelectorAll('.add')[0].style.display = 'none';
 document.querySelectorAll('.add')[0].style.visibility = 'hidden';
 showJokes();
 
+/**
+ * funkcia vytvára AJAX volanie na žiadosť o načítanie vlastných (používateľových) vtipov
+ */
 function showJokes() {
     hidden1 = !hidden1;
 
@@ -29,6 +32,9 @@ function showJokes() {
     }
 }
 
+/**
+ * funkcia umožňujúca preklikávanie medzi možnosťou vlastných vtipov a pridávania nového vtipu
+ */
 function addJokes() {
     hidden2 = !hidden2;
     if(hidden2) {

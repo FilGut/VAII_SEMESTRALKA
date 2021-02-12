@@ -6,6 +6,9 @@ require "Jokes.php";
 class Runner
 {
 
+    /**
+     * táto funkcia je primárna pri AJAX volaniach, podľa poslanej q (query) vieme posúdiť o aký typ požiadavky ide
+     */
     function run()
     {
         $jokes = new Jokes();

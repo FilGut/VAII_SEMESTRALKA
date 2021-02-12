@@ -2,6 +2,12 @@
 
 session_start();
 
+/**
+ * abstraktná trieda, slúži na to, aby nebolo potrebné sa viac ako len raz prihlasovať do datbázy,
+ * väčšina php tried je o ňu rozšírená (extended)
+ *
+ * Class Storage
+ */
 abstract class Storage
 {
     private const DB_HOST = 'localhost';

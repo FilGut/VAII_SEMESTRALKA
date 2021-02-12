@@ -2,8 +2,14 @@
 
 class Jokes extends Storage
 {
+
+    /**
+     * funkcia slúži na zobrazenie pridaných vtipov používateľa
+     */
     function showMyJokes()
     {
+        //najprv sa zistia pridané vtipy z databázy
+        //následne sa vytvorí tabuľka, kde je možné tieto vtipy (a ďalšie info) prehliadať
         $stmt = $this->db->prepare('SELECT title, joke, likes from jokes where user_id = ' . $_SESSION['user_id']);
         $stmt->execute();
 
@@ -23,8 +29,12 @@ class Jokes extends Storage
         echo "</table>";
     }
 
+    /**
+     * funckia slúži na zobrazenie všetkých vtipov na stránke
+     */
     function showAllJokes()
     {
+        //okrem tradičnej tabuľky sa vytvoria aj tlačidlá umožňujúce prihláseným používateľom dať like na konkrétny vtip
         $stmt = $this->db->prepare('SELECT joke_id, title, joke, likes, name from jokes JOIN users ON jokes.user_id = users.user_id');
         $stmt->execute();
 
@@ -48,8 +58,15 @@ class Jokes extends Storage
         echo "</table>";
     }
 
+    /**
+     * funkcia slúži na pridanie a zápis liku do databázy k príslušnému vtipu
+     *
+     * @param $j
+     */
     function addLike($j)
     {
+        //funkcia taktiež dbá na to, aby nebolo možné jeden vtip olajkovať 1 užívateľom viackrát
+        //v prípade opätovného stlačenia tlačidla sa pridaný like odoberie
         try {
             $sql = "SELECT like_id FROM likes WHERE user_id=? AND joke_id=?"; // SQL with parameters
             $stmt = $this->db->prepare($sql);
@@ -78,8 +95,14 @@ class Jokes extends Storage
         }
     }
 
+    /**
+     * funkcia slúži na umožnenie vyhľadávania vtipov (podľa názvu alebo mena používateľa)
+     *
+     * @param $q
+     */
     function search($q)
     {
+        //zadaný argument sa porovnáva ako reťazec s názvami vtipov a menami požívateľov
         $stmt = $this->db->prepare("SELECT joke_id, title, joke, likes, name from jokes JOIN users ON jokes.user_id = users.user_id WHERE title LIKE '%" . $q . "%' OR name LIKE '%". $q . "%'");
         $stmt->execute();
         $stmt->setFetchMode(PDO::FETCH_NUM);
@@ -104,6 +127,12 @@ class Jokes extends Storage
         echo "</table>";
     }
 
+    /**
+     * funkcia umožňuje prihlásenému užívateľovi pridať nový vtip
+     *
+     * @param $title
+     * @param $text
+     */
     function addJoke($title, $text)
     {
         try {
@@ -114,6 +143,13 @@ class Jokes extends Storage
         }
     }
 
+    /**
+     * táto funkcia slúži na násilne zmazanie vtipu používateľa,
+     * je prístupná len administrátorovi (používateľovi s rankom 0)
+     *
+     * @param $title
+     * @return bool
+     */
     function deleteJoke($title)
     {
         try {
