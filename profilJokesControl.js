@@ -24,7 +24,7 @@ function showJokes() {
                 document.getElementById("jokes").innerHTML = this.responseText;
             }
         };
-        xmlhttp.open("GET","getJokes.php?q="+"1",true);
+        xmlhttp.open("GET","index.php?q=1",true);
         xmlhttp.send();
     }
 }

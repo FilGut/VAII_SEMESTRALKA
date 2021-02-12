@@ -1,8 +1,8 @@
 <?php
 
-require "Storage.php";
-require "Account.php";
 
-$storage = new Account();
+require "Run.php";
 
-$storage->run();
+$runner = new Runner();
+
+$runner->run();

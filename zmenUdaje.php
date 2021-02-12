@@ -16,6 +16,8 @@ include 'menu.php';
 
 <div class="row">
 
+    <script src="validation.js"></script>
+
     <div class="oStranke">
         <h1>ZMENA ÚDAJOV</h1>
         <form method="post" name="form">
@@ -32,7 +34,7 @@ include 'menu.php';
             <input type="text" id="email" placeholder="Nový e-mail" name="newEmail">
             <br>
             <br>
-            <input type="submit" onClick="return validate();" value="Zmeniť!" name="changeData">
+            <input type="submit" onClick="return validateNew();" value="Zmeniť!" name="changeData">
         </form>
 
         <br>
@@ -45,7 +47,7 @@ include 'menu.php';
     </div>
 </div>
 
-<script src="validation.js"></script>
+
 
 </body>
 </html>

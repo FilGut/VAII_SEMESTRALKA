@@ -8,6 +8,29 @@ function validate()
     return false;
 }
 
+function validateNew()
+{
+    if((document.getElementById("email").value) !== "")
+    {
+        if(checkEmail()===false)
+        {
+            togglePopup();
+            return false;
+        }
+    }
+
+    if((document.getElementById("pass").value) !== "")
+    {
+        if(checkEmail()===false)
+        {
+            togglePopup();
+            return false;
+        }
+    }
+
+    return true;
+}
+
 function togglePopup()
 {
     var popup = document.getElementById("myPopup");
@@ -29,7 +52,7 @@ function checkEmail()
 {
     var reg = /^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,})$/i;
 
-    if((document.getElementById("email").value).match(reg) || (document.getElementById("email").value) === ""){
+    if((document.getElementById("email").value).match(reg)){
         return true;
     }
     return false;
