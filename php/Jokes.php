@@ -1,7 +1,5 @@
 <?php
 
-
-
 class Jokes extends Storage
 {
     function showMyJokes()

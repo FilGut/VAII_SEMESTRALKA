@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
-    <?php require 'Storage.php'; require 'Account.php';?>
-    <?php include 'zmenUdajeChecking.php'?>
+    <?php require '../php/Storage.php'; require '../php/Account.php';?>
+    <?php include '../php/checkings/zmenUdajeChecking.php' ?>
     <meta charset="UTF-8">
     <title>ZmenUdaje</title>
-    <link rel="stylesheet" href="<?php include 'generalChecking.php' ?>">
+    <link rel="stylesheet" href="<?php include '../php/checkings/generalChecking.php' ?>">
 </head>
 
 <body>
 
 <?php
-include 'menu.php';
+include '../php/menu.php';
 ?>
 
 <div class="row">
 
-    <script src="validation.js"></script>
+    <script src="../js/validation.js"></script>
 
     <div class="oStranke">
         <h1>ZMENA ÚDAJOV</h1>

@@ -2,7 +2,7 @@ body {
     font-family: Arial;
     background-color: antiquewhite;
 
-    background-image: url('wallpaperflare.com_wallpaper.jpg');
+    background-image: url('../images/wallpaperflare.com_wallpaper.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -410,9 +410,6 @@ th {
         flex-wrap: wrap;
     }
 
-    /*.najlepsiVtip {*/
-    /*    position: center;*/
-    /*}*/
 
     .side1 {
         position: static;

@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
-    <?php require 'Storage.php'; require 'Account.php';?>
-    <?php include 'registraciaChecking.php'?>
+    <?php require '../php/Storage.php'; require '../php/Account.php';?>
+    <?php include '../php/checkings/registraciaChecking.php' ?>
     <meta charset="UTF-8">
     <title>Registracia</title>
-    <link rel="stylesheet" href="<?php include 'generalChecking.php' ?>">
+    <link rel="stylesheet" href="<?php include '../php/checkings/generalChecking.php' ?>">
 
 </head>
 
 <body>
 
 <?php
-include 'menu.php';
+include '../php/menu.php';
 ?>
 
 <div class="row">
@@ -35,14 +35,13 @@ include 'menu.php';
             <input type="text" id="email" placeholder="E-mail" name="newEmail" required>
             <br>
             <br>
-<!--            <input type="submit" value="Registrovať!" name="signup">-->
             <input type="submit" onClick="return validate();" value="Registrovať!" name="signup">
         </form>
     </div>
 
 </div>
 
-<script src="validation.js"></script>
+<script src="../js/validation.js"></script>
 
 </body>
 </html>

@@ -1,13 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="277c5770-6916-4c2f-94af-297fc2e1119b" name="Default Changelist" comment="chyba v javascripte opravená">
+    <list default="true" id="277c5770-6916-4c2f-94af-297fc2e1119b" name="Default Changelist" comment="upratanie php súborov a vyriešenie problému so session">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Account.php" beforeDir="false" afterPath="$PROJECT_DIR$/Account.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Jokes.php" beforeDir="false" afterPath="$PROJECT_DIR$/Jokes.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Storage.php" beforeDir="false" afterPath="$PROJECT_DIR$/Storage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profil.php" beforeDir="false" afterPath="$PROJECT_DIR$/profil.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profilChecking.php" beforeDir="false" afterPath="$PROJECT_DIR$/profilChecking.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Account.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/Account.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jokes.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/Jokes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Run.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/Runner.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Storage.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/Storage.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bean.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/bean.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generalChecking.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/checkings/generalChecking.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leavingSchool.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/leavingSchool.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/loggedIn.css" beforeDir="false" afterPath="$PROJECT_DIR$/style/loggedIn.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/masks.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/masks.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/memecka.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/memecka.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/menu.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oStranke.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/oStranke.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/overthing.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/overthing.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prihlasit.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/prihlasit.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prihlasitChecking.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/checkings/prihlasitChecking.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profil.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/profil.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profilChecking.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/checkings/profilChecking.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profilJokesControl.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/profilJokesControl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/registracia.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/registracia.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/registraciaChecking.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/checkings/registraciaChecking.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styl.css" beforeDir="false" afterPath="$PROJECT_DIR$/style/styl.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/textVJokesControl.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/textVJokesControl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/textVtipy.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/textVtipy.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unnamed.gif" beforeDir="false" afterPath="$PROJECT_DIR$/images/unnamed.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/validation.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/validation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vtipy.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/vtipy.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wallpaperflare.com_wallpaper.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/wallpaperflare.com_wallpaper.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zmenUdaje.php" beforeDir="false" afterPath="$PROJECT_DIR$/sites/zmenUdaje.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/zmenUdajeChecking.php" beforeDir="false" afterPath="$PROJECT_DIR$/php/checkings/zmenUdajeChecking.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +84,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\miros\Desktop\Vysoká škola\3. ročník\VAII\semestralka\sem" />
+      <recent name="C:\Users\miros\Desktop\Vysoká škola\3. ročník\VAII\3cv\php_mysql\www\php\checkings" />
+      <recent name="C:\Users\miros\Desktop\Vysoká škola\3. ročník\VAII\3cv\php_mysql\www\sites" />
+      <recent name="C:\Users\miros\Desktop\Vysoká škola\3. ročník\VAII\3cv\php_mysql\www\images" />
+      <recent name="C:\Users\miros\Desktop\Vysoká škola\3. ročník\VAII\3cv\php_mysql\www\js" />
+      <recent name="C:\Users\miros\Desktop\Vysoká škola\3. ročník\VAII\3cv\php_mysql\www\style" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -85,7 +114,7 @@
       <workItem from="1612782339522" duration="10955000" />
       <workItem from="1612866589839" duration="15379000" />
       <workItem from="1612955714240" duration="33283000" />
-      <workItem from="1613043592228" duration="29935000" />
+      <workItem from="1613043592228" duration="32726000" />
     </task>
     <task id="LOCAL-00001" summary="AJAX">
       <created>1612982318337</created>
@@ -164,7 +193,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613090224893</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="upratanie php súborov a vyriešenie problému so session">
+      <created>1613091640189</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1613091640189</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -191,6 +227,7 @@
     <MESSAGE value="záhadná chyba opravená týkajúca sa predošlého commitu" />
     <MESSAGE value="oddelenie javascriptu od httml, plne funkčné" />
     <MESSAGE value="chyba v javascripte opravená" />
-    <option name="LAST_COMMIT_MESSAGE" value="chyba v javascripte opravená" />
+    <MESSAGE value="upratanie php súborov a vyriešenie problému so session" />
+    <option name="LAST_COMMIT_MESSAGE" value="upratanie php súborov a vyriešenie problému so session" />
   </component>
 </project>

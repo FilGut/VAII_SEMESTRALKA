@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
-    <?php require 'Storage.php'; require 'Account.php';?>
+    <?php require '../php/Storage.php'; require '../php/Account.php';?>
     <meta charset="UTF-8">
     <title>Info</title>
-    <link rel="stylesheet" href="<?php include 'generalChecking.php' ?>">
+    <link rel="stylesheet" href="<?php include '../php/checkings/generalChecking.php' ?>">
 </head>
 
 <body>
 
 <?php
-include 'menu.php';
+include '../php/menu.php';
 ?>
 
 <div class="row">

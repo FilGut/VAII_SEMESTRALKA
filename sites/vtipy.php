@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
-    <?php require 'Storage.php'; require 'Account.php';?>
+    <?php require '../php/Storage.php'; require '../php/Account.php';?>
     <meta charset="UTF-8">
     <title>Vtipy</title>
-    <link rel="stylesheet" href="<?php include 'generalChecking.php' ?>">
+    <link rel="stylesheet" href="<?php include '../php/checkings/generalChecking.php' ?>">
 </head>
 
 <body>
 
 <?php
-include 'menu.php';
+include '../php/menu.php';
 ?>
 
 <div class="row">
@@ -26,12 +26,8 @@ include 'menu.php';
             </figure>
         </div>
 
-
-
         <p>Autor vtipným spôsobom ukazuje každodenné problémy ako aj žiakov, tak aj dospelých.</p>
-        <!--        <div class="fakeimg" style="height:60px;">Image</div><br>-->
-        <!--        <div class="fakeimg" style="height:60px;">Image</div><br>-->
-        <!--        <div class="fakeimg" style="height:60px;">Image</div>-->
+
     </div>
 
 
@@ -68,17 +64,12 @@ include 'menu.php';
             </figure>
         </div>
 
-
-
         <p>Autor vtipným spôsobom zobrazuje absurdnosť otázky nahnevaných delikventov.</p>
-        <!--        <div class="fakeimg" style="height:60px;">Image</div><br>-->
-        <!--        <div class="fakeimg" style="height:60px;">Image</div><br>-->
-        <!--        <div class="fakeimg" style="height:60px;">Image</div>-->
+
     </div>
 
 
 </div>
-
 
 </body>
 </html>

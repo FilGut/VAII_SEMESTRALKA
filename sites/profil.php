@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
-    <?php require 'Storage.php'; require 'Account.php'; require 'Jokes.php';?>
-    <?php include 'profilChecking.php';?>
+    <?php require '../php/Storage.php'; require '../php/Account.php'; require '../php/Jokes.php';?>
+    <?php include '../php/checkings/profilChecking.php';?>
     <meta charset="UTF-8">
     <title>Profil</title>
-    <link rel="stylesheet" href="<?php include 'generalChecking.php'; ?>">
+    <link rel="stylesheet" href="<?php include '../php/checkings/generalChecking.php'; ?>">
 </head>
 
 <body>
 
 <?php
-include 'menu.php';
+include '../php/menu.php';
 ?>
 
 <div class="row">
@@ -48,7 +48,7 @@ include 'menu.php';
 
 </div>
 
-<script src="profilJokesControl.js"></script>
+<script src="../js/profilJokesControl.js"></script>
 
 </body>
 </html>

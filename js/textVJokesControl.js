@@ -7,7 +7,7 @@ function showAllJokes() {
             document.getElementById("content").innerHTML = this.responseText;
         }
     };
-    xmlhttp.open("GET","index.php?q=2",true);
+    xmlhttp.open("GET","../index.php?q=2",true);
     xmlhttp.send();
 }
 
@@ -19,7 +19,7 @@ function addLike(id)
             document.getElementById("content").innerHTML = this.responseText;
         }
     };
-    xmlhttp.open("GET", "index.php?q=3&j="+id, true);
+    xmlhttp.open("GET", "../index.php?q=3&j="+id, true);
     xmlhttp.send();
 }
 
@@ -30,6 +30,6 @@ function searchJokes() {
             document.getElementById("content").innerHTML = this.responseText;
         }
     };
-    xmlhttp.open("GET", "index.php?q="+document.getElementById("search").value, true);
+    xmlhttp.open("GET", "../index.php?q="+document.getElementById("search").value, true);
     xmlhttp.send();
 }
