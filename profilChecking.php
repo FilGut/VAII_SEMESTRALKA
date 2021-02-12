@@ -1,10 +1,10 @@
 <?php
 
-$storage = new Account();
+$jokes = new Jokes();
 
 if (isset($_POST['title']) && isset($_POST['joke'])) {
     if (isset($_SESSION['loggedIn']))
     {
-        $storage->addJokes($_POST['title'], $_POST['joke']);
+        $jokes->addJoke($_POST['title'], $_POST['joke']);
     }
 }

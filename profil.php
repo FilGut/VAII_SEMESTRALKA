@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zxx">
 <head>
-    <?php require 'Storage.php'; require 'Account.php';?>
+    <?php require 'Storage.php'; require 'Account.php'; require 'Jokes.php';?>
     <?php include 'profilChecking.php';?>
     <meta charset="UTF-8">
     <title>Profil</title>

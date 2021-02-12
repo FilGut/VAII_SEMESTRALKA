@@ -1,6 +1,6 @@
 <?php
 
-session_start();
+
 
 class Jokes extends Storage
 {
@@ -38,6 +38,7 @@ class Jokes extends Storage
                 <th>Počet likov</th>
                 <th>Pridal</th>
                 </tr>";
+
         while($row = $stmt->fetch()) {
             echo "<tr>";
             echo "<td>" . $row['1'] . "</td>";
@@ -53,10 +54,8 @@ class Jokes extends Storage
     {
         try {
             $sql = "SELECT like_id FROM likes WHERE user_id=? AND joke_id=?"; // SQL with parameters
-            //$stmt = $conn->prepare($sql);
             $stmt = $this->db->prepare($sql);
             $stmt->execute(array($_SESSION['user_id'], $j));
-            //$stmt->setFetchMode(PDO::FETCH_NUM);
 
             if ($stmt->rowCount() == 0)
             {
@@ -95,6 +94,7 @@ class Jokes extends Storage
                 <th>Počet likov</th>
                 <th>Pridal</th>
                 </tr>";
+
         while($row = $stmt->fetch()) {
             echo "<tr>";
             echo "<td>" . $row['1'] . "</td>";
@@ -106,14 +106,11 @@ class Jokes extends Storage
         echo "</table>";
     }
 
-    function addJokes($title, $text)
+    function addJoke($title, $text)
     {
-        print("som vo vnútri metódy");
-
         try {
             $sql = 'INSERT into jokes(user_id, likes, joke, title) value(?,?,?,?)';
             $this->db->prepare($sql)->execute([$_SESSION['user_id'], 0, $text, $title]);
-            print("spravil bez chyby");
         } catch (PDOException $e) {
             echo 'Connection failer: ' . $e->getMessage();
         }
