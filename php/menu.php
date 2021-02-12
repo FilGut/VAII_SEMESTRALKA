@@ -35,11 +35,9 @@
     </div>
 
     <div class = loggedIn>
-        <a>
             <form method="post" name="form">
                 <input id="logoutButton" type="submit" value="Odhlásiť!" name="logout">
             </form>
-        </a>
     </div>
 
     <a href="../sites/oStranke.php">O stránke</a>
