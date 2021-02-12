@@ -1170,7 +1170,11 @@
       <Position>4</Position>
       <DataType>varchar(100)|0s</DataType>
     </column>
-    <key id="363" parent="338" name="PRIMARY">
+    <column id="363" parent="338" name="rank">
+      <Position>5</Position>
+      <DataType>int(11)|0s</DataType>
+    </column>
+    <key id="364" parent="338" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>user_id</ColNames>
       <Primary>1</Primary>

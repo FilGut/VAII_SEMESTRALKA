@@ -6,8 +6,8 @@ class Account extends Storage
     {
         try {
             $pass = password_hash($password,PASSWORD_DEFAULT);
-            $sql = 'INSERT INTO users (name, password, email) value (?, ?, ?)';
-            $this->db->prepare($sql)->execute([$name, $pass, $email]);
+            $sql = 'INSERT INTO users (name, password, email, rank) value (?, ?, ?, ?)';
+            $this->db->prepare($sql)->execute([$name, $pass, $email, 1]);
         } catch (PDOException $e) {
             echo 'Connection failer: ' . $e->getMessage();
         }
@@ -45,7 +45,7 @@ class Account extends Storage
      */
     function login($name, $password)
     {
-        $stmt = $this->db->prepare("SELECT user_id, password from users where name = '" . $name  ."'");
+        $stmt = $this->db->prepare("SELECT user_id, password, rank from users where name = '" . $name  ."'");
         $stmt->execute();
 
         $stmt->setFetchMode(PDO::FETCH_NUM);
@@ -57,15 +57,18 @@ class Account extends Storage
         while ($row = $stmt->fetch()) {
             $id = $row[0];
             $hash = $row[1];
+            $rank = $row[2];
         }
 
         if(password_verify($password, $hash))
         {
             $_SESSION['user_id'] = $id;
             $_SESSION['loggedIn'] = true;
+            $_SESSION['rank'] = $rank;
+            return true;
         }
 
-        return true;
+        return false;
     }
 
     function logout()
@@ -113,6 +116,26 @@ class Account extends Storage
             );
         }
         session_destroy();
+    }
+
+    function deleteUser($name)
+    {
+        try {
+            $sql = 'DELETE from users where name = ?';
+            $this->db->prepare($sql)->execute([$name]);
+
+            $stmt = $this->db->prepare("SELECT user_id from users WHERE name = " . $name);
+            $stmt->execute();
+            $stmt->setFetchMode(PDO::FETCH_NUM);
+
+            if ($stmt->rowCount() == 0)
+            {
+                return true;
+            }
+        } catch (PDOException $e) {
+            echo 'Connection failer: ' . $e->getMessage();
+        }
+        return false;
     }
 
 //    /**

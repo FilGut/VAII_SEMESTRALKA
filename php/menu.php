@@ -17,17 +17,8 @@
 
 <div class="menu">
     <a href="../sites/vtipy.php">Domov</a>
-    <div class="rozbal">
 
-        <button class="kategorie">Kategórie
-            <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="rozbalObsah">
-            <a href="../sites/textVtipy.php">Textové vtipy</a>
-            <a href="#">Vtipné obrázky</a>
-            <a href="../sites/memecka.php">Memečka</a>
-        </div>
-    </div>
+    <a href="../sites/textVtipy.php">Vtipy</a>
 
     <div class="loggedOut">
         <a href="../sites/prihlasit.php">Prihlásiť</a>
@@ -52,4 +43,11 @@
     </div>
 
     <a href="../sites/oStranke.php">O stránke</a>
+
+    <?php if(isset($_SESSION['rank'])) {
+        if($_SESSION['rank']==0) {?>
+            <div class = loggedIn>
+                <a href="../sites/admin.php">Admin sekcia</a>
+            </div>
+        <?php } }?>
 </div>

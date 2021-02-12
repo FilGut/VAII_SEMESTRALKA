@@ -113,4 +113,24 @@ class Jokes extends Storage
             echo 'Connection failer: ' . $e->getMessage();
         }
     }
+
+    function deleteJoke($title)
+    {
+        try {
+            $sql = 'DELETE from jokes where title = ?';
+            $this->db->prepare($sql)->execute([$title]);
+
+            $stmt = $this->db->prepare("SELECT joke_id from jokes WHERE title = " . $title);
+            $stmt->execute();
+            $stmt->setFetchMode(PDO::FETCH_NUM);
+
+            if ($stmt->rowCount() == 0)
+            {
+                return true;
+            }
+        } catch (PDOException $e) {
+            echo 'Connection failer: ' . $e->getMessage();
+        }
+        return false;
+    }
 }
